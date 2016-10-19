@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js" charset="utf-8"></script>
+    <script src="scripts/client.js" charset="utf-8"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="MainController as main">
+
+    <div>
+        <button  ng-click="main.getGiphy()">Random</button>
+
+        <!-- //ng-model="main.random" -->
+<p >
+<img ng-value = 'random.id'  ng-src = '{{main.randomImage.image_url}}'/>
+
+  <!-- //ng-src with with link angular to fill that -->
+  {{randomImage.image_url}}
+
+</p>
+    </div>
+
+</body>
+
+</html>
