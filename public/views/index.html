@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="styles/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js" charset="utf-8"></script>
     <script src="scripts/client.js" charset="utf-8"></script>
+    <script src="scripts/main.controller.js"></script>
+    <script src="scripts/giphy.service.js"></script>
 </head>
 
-<body ng-app="myApp" ng-controller="MainController as main">
+<body ng-app="giphyApp" ng-controller="MainController as main">
 
     <div>
         <button ng-click="main.getGiphy()">Random</button>
