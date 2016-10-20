@@ -9,23 +9,28 @@
     <script src="scripts/client.js" charset="utf-8"></script>
     <script src="scripts/main.controller.js"></script>
     <script src="scripts/giphy.service.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 </head>
 
 <body ng-app="giphyApp" ng-controller="MainController as main">
-
+<h1>Giphy Fun!</h1>
     <div>
-        <button ng-click="main.getGiphy()">Random</button>
+        <button ng-click="main.getGiphy()">Click Here for Random Giphy</button>
         <p>
-            <img ng-src='{{main.randomImage.image_url}}' />
+            <img class="one" ng-src='{{main.randomImage.image_url}}' />
         </p>
     </div>
 
-    <form>
+    <div>
         <input type="text" ng-value = "main.searched" ng-model= "main.searched"/>
-        <button ng-click = "main.searchGiphy()">Search for Giphy</button>
-        <img ng-src="{{image.images.downsized_large.url}}" ng-repeat="image in main.searchImage track by $index"  />
+        <button class="search-button" ng-click = "main.searchGiphy()">Search for Giphy</button>
+        </div>
+        <div>
+          <img class="many" ng-src="{{image.images.downsized_large.url}}" ng-repeat="image in main.searchImage track by $index"  />
 
-    </form>
+        </div>
+
+
 
 </body>
 
