@@ -1,7 +1,6 @@
 {
-  "name": "API-Peer-Challenge-Giphy",
+  "name": "api-peer-challenge-giphy",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.15.2",
@@ -14,5 +13,14 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/motbsitu/API-Peer-Challenge-Giphy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/motbsitu/API-Peer-Challenge-Giphy/issues"
+  },
+  "homepage": "https://github.com/motbsitu/API-Peer-Challenge-Giphy#readme",
+  "description": ""
 }
