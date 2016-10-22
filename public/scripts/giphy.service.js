@@ -4,7 +4,6 @@ angular.module('giphyApp')
 function giphyAPIService($http) {
   var API = 'http://api.giphy.com/v1/gifs/';
   var key = 'dc6zaTOxFJmzC';
-  //var random = 'random?';
   var search = 'search?q=';
 
   this.getGiphy = function() {
@@ -18,16 +17,7 @@ function giphyAPIService($http) {
                 return response.data.data;
               });
             }
-//another option instead of additional vars
-// return $http.get(API + /random, {
-//  params:{
-  //  api_key: dc6zaTOxFJmzC,
-  //  rating: y
-  //}
-//  }).then(function(response) {
-//         return response.data.data;
-//       });
-//     };
+
 
 
   this.searchGiphy = function(searched) {

@@ -1,23 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="giphyApp" >
 
 <head>
     <meta charset="utf-8">
     <title>Giphy</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js" charset="utf-8"></script>
-    <script src="scripts/client.js" charset="utf-8"></script>
+    <script src="vendors/angular.min.js"></script>
+    <script src="vendors/angular-route.min.js"></script>
+    <script src="scripts/app.module.js"></script>
+    <script src="scripts/app.config.js"></script>
+
     <script src="scripts/main.controller.js"></script>
+    <script srs="scripts/fav.controller.js"></script>
     <script src="scripts/giphy.service.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <base href="/" />
 </head>
 
-<body ng-app="giphyApp" ng-controller="MainController as main">
+<body ng-controller="MainController as main">
     <h1>Giphy Fun!</h1>
+    <nav>
+      <a href="/index">Home</a>
+      <a href="/favorites">Favorites</a>
+      <p> Count:</p>
+    </nav>
+
     <div>
         <button ng-click="main.getGiphy()">Click Here for Random Giphy</button>
         <p>
             <img class="one" ng-src='{{main.randomImage.image_url}}' />
+            <label for="Comment:">Comment</label>
+            <input type="text" id="comment" name="comment"/>
+            <button>Favorite Giphy</button>
         </p>
     </div>
 
@@ -28,6 +42,10 @@
     <div>
         <img class="many" ng-src="{{image.images.fixed_height.url}}" ng-repeat="image in main.searchImage track by $index" />
 
+    </div>
+    <div>
+      <ng-view>
+      </ng-view>
     </div>
 
 

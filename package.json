@@ -1,10 +1,13 @@
 {
-  "name": "api-peer-challenge-giphy",
+  "name": "rho_weekend_challenge_5",
   "version": "1.0.0",
   "main": "server.js",
   "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
     "body-parser": "^1.15.2",
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "pg": "^6.1.0"
   },
   "devDependencies": {},
   "scripts": {
@@ -12,15 +15,15 @@
     "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Julie S Mike",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/motbsitu/API-Peer-Challenge-Giphy.git"
+    "url": "git+https://github.com/motbsitu/rho_weekend_challenge_5.git"
   },
   "bugs": {
-    "url": "https://github.com/motbsitu/API-Peer-Challenge-Giphy/issues"
+    "url": "https://github.com/motbsitu/rho_weekend_challenge_5/issues"
   },
-  "homepage": "https://github.com/motbsitu/API-Peer-Challenge-Giphy#readme",
-  "description": ""
+  "homepage": "https://github.com/motbsitu/rho_weekend_challenge_5#readme",
+  "description": "Giphy Fun"
 }
