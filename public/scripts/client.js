@@ -1,9 +1,1 @@
 angular.module('giphyApp', []);
-
-
-
-
-
-
-
-    
