@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="giphyApp" >
+<html ng-app="giphyApp" ng-controller="MainController as main">
 
 <head>
     <meta charset="utf-8">
@@ -11,38 +11,20 @@
     <script src="scripts/app.config.js"></script>
 
     <script src="scripts/main.controller.js"></script>
-    <script srs="scripts/fav.controller.js"></script>
     <script src="scripts/giphy.service.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
     <base href="/" />
 </head>
 
-<body ng-controller="MainController as main">
+<body >
     <h1>Giphy Fun!</h1>
     <nav>
-      <a href="/index">Home</a>
+      <a href="/home">Home</a>
       <a href="/favorites">Favorites</a>
       <p> Count:</p>
     </nav>
 
-    <div>
-        <button ng-click="main.getGiphy()">Click Here for Random Giphy</button>
-        <p>
-            <img class="one" ng-src='{{main.randomImage.image_url}}' />
-            <label for="Comment:">Comment</label>
-            <input type="text" id="comment" name="comment"/>
-            <button>Favorite Giphy</button>
-        </p>
-    </div>
 
-    <div>
-        <input type="text" ng-model="main.searched" />
-        <button class="search-button" ng-click="main.searchGiphy()">Search for Giphy</button>
-    </div>
-    <div>
-        <img class="many" ng-src="{{image.images.fixed_height.url}}" ng-repeat="image in main.searchImage track by $index" />
-
-    </div>
     <div>
       <ng-view>
       </ng-view>
