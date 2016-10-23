@@ -25,16 +25,19 @@ function giphyAPIService($http) {
             });
     };
     this.favoriteGiphy = function(favorited){
+      console.log('in giphy service', favorited);
       return $http.post('/favorites', favorited)
-      .then(function(response){
-        return response;
-        console.log('response in services', response);
+      .then(function(favorited){
+              console.log('response in services', favorited);
+        return favorited;
+
       });
     };
 
     this.getFavoriteGiphy = function(){
 		return $http.get('/favorites')
 		.then(function(response){
+      console.log('giphy response', response);
 			return response;
 		});
 	};

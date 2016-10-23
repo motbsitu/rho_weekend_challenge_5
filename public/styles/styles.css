@@ -57,13 +57,16 @@ input{
   margin-right: 275px;
 
 }
-.many-gif{
-  display: inline-block;
-  margin-left: 100px;
-}
+
 .many{
   box-shadow: 10px 10px 5px #888888;
-  display: grid;
-  text-align: center;
+  width: 100%;
+  margin: 20px;
+  height: 200px;
+}
+.fav-gif{
+  box-shadow: 10px 10px 5px #888888;
+  display: inline-block;
+
   margin: 20px;
 }

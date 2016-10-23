@@ -8,8 +8,13 @@ function MainController(giphy) {
     main.searchImage = [];
     main.favorites = {};
     main.favoritesArray=[];
-    main.favoritesCount = 0;
+    main.favoriteCount = 0;
 
+    giphy.getGiphy()
+        .then(function(randomImage) {
+            main.randomImage = randomImage;
+            console.log('this', randomImage);
+        });
 
     //$http get calls
 
@@ -30,26 +35,26 @@ function MainController(giphy) {
 
     main.favoriteGiphy = function(comment, imagelink){
       main.favorites = {comment: comment, imagelink: imagelink};
-      console.log('main favorites', main.favorites);
-      main.favoritesCount ++;
-        giphy.favoriteGiphy(main.favorites)
+      main.favoriteCount ++;
+    //  console.log('main favorites', main.favorites);
+          giphy.favoriteGiphy(main.favorites)
             .then(function(response){
-            console.log('response from main cont', response);
-            // main.getFavoriteGiphy();
+            //console.log('response from main cont', response);
+            main.getFavoriteGiphy();
           });
     };
 
-    // main.getFavoriteGiphy = function(){
-    //     giphy.getFavoriteGiphy()
-    //           .then(function(response){
-    //             main.favoritesArray = response;
-    //         console.log(main.favoritesArray);
-    //         //main.favoriteCount=response.data.length;
-    //         console.log(main.favoriteCount);
-    //     });
-    //
-    // };
-    //
-    // main.getFavoriteGiphy();
+    main.getFavoriteGiphy = function(){
+        giphy.getFavoriteGiphy()
+              .then(function(response){
+                main.favoritesArray = response.data;
+                main.favoriteCount = response.data.length;
+            console.log('fav array in main control', main.favoritesArray);
+                  console.log('count in main control', main.favoriteCount);
+        });
+
+    };
+
+   main.getFavoriteGiphy();
 
 }

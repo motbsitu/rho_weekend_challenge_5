@@ -1,3 +1,7 @@
 <h2>Favorites</h2>
-
-<img class="one" ng-src='{{main.randomImage.fixed_height_downsampled_url}}' />
+<div class="fav-gif" ng-repeat="favorite in main.favoritesArray">
+  <img ng-src="{{favorite.imagelink}}" />
+  <p>
+    {{favorite.comment}}    
+  </p>
+</div>
