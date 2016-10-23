@@ -18,12 +18,10 @@
     <button class="search-button" ng-click="main.searchGiphy()">Search for Giphy</button>
 </div>
 
-<div class="many-gif row" >
-  <div class="col-md-3" ng-repeat="image in main.searchImage">
-
-
-    <img class="many"  ng-src="{{image.images.fixed_height.url}}"  />
-    <input type="text" id="comment" name="comment" ng-model="main.comment2" />
-    <button ng-click="main.favoriteGiphy(main.comment2, image.images.fixed_height.url)">Click to Save to Favorites</button>
-      </div>
+<div class="many-gif row">
+    <div class="col-md-3" ng-repeat="image in main.searchImage">
+        <img class="many" ng-src="{{image.images.fixed_height.url}}" />
+        <input type="text" id="comment" name="comment" ng-model="main.comment2" />
+        <button ng-click="main.favoriteGiphy(main.comment2, image.images.fixed_height.url)">Click to Save to Favorites</button>
+    </div>
 </div>

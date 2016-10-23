@@ -51,22 +51,18 @@ input{
   margin-top: 50px;
 }
 .search-gif{
-  clear: both;
-  display: inline-grid;
+  margin-top: 150px;
+  display: inline-block;
   float: right;
   margin-right: 275px;
 
 }
-
+.many-gif{
+  clear: both;
+}
 .many{
   box-shadow: 10px 10px 5px #888888;
   width: 100%;
   margin: 20px;
   height: 200px;
-}
-.fav-gif{
-  box-shadow: 10px 10px 5px #888888;
-  display: inline-block;
-
-  margin: 20px;
 }

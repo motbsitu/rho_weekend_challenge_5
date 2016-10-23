@@ -12,11 +12,9 @@ var config = {
 var pool = new pg.Pool(config);
 
 router.post('/', function(req, res){
-    console.log('req.body home route server post', req.body);
     var imagelink = req.body.imagelink;
     var comment = req.body.comment;
 
-    console.log('image link in server post', imagelink);
 
     pool.connect(function(err, client, done){
         if(err){
@@ -55,7 +53,6 @@ router.post('/', function(req, res){
                   res.sendStatus('query error', 500);
                   return;
               }
-
           console.log('Got rows from the DB:',result.rows);
           res.send(result.rows);
 

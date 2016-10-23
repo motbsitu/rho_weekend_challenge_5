@@ -3,8 +3,8 @@ angular.module('giphyApp')
         $routeProvider.when('/',{
           templateUrl: 'views/home.html',
           controller:'MainController as main'
-        }).when('/favorites',{
-          templateUrl: 'views/favorites.html',
+        }).when('/favoritepage',{
+          templateUrl: 'views/favoritepage.html',
           controller: 'MainController as main'
         }).when('/home',{
           templateUrl: 'views/home.html',
@@ -12,7 +12,6 @@ angular.module('giphyApp')
         }).otherwise('/',{
           templateUrl: 'views/home.html',
           controller:'MainController as main'
-
         });
         $locationProvider.html5Mode(true);
       });
