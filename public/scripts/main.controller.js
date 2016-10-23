@@ -31,7 +31,7 @@ function MainController(giphy) {
     main.favoriteGiphy = function(comment, imagelink){
       main.favorites = {comment: comment, imagelink: imagelink};
       console.log('main favorites', main.favorites);
-    //  main.favoritesCount ++;
+      main.favoritesCount ++;
         giphy.favoriteGiphy(main.favorites)
             .then(function(response){
             console.log('response from main cont', response);

@@ -1,33 +1,69 @@
 body {
-    background-color: #729688;
+    background: #729688;
+    background: -webkit-linear-gradient(left, #729688 , #fffacd);
+    background: -o-linear-gradient(right, #729688, #fffacd);
+    background: -moz-linear-gradient(right, #729688, #fffacd);
+    background: linear-gradient(to right, #729688 , #fffacd);
     width: 100%;
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Lato', sans-serif;
 }
 h1{
   text-align: center;
   font-size: 50px;
 }
+nav{
+  text-align: center;
+  font-size: 20px;
+}
+nav a{
+  padding: 5px;
+}
 button{
-  display: inline-block;
+  display: block;
   text-align: center;
   background-color: #e7e7e7; color: black;
   font-size: 15px;
   margin-top: 2px;
 }
-div{
-  margin:auto;
-  text-align: center;
-}
+
 input{
   width: 200px;
-  height: 25px;
+  height: 20px;
 }
 
 .one{
   box-shadow: 10px 10px 5px #888888;
+  margin-top: 40px;
+  height: 208px;
+  width: 325px;
 }
 
+.random-gif{
+  display: inline-block;
+  float: left;
+  margin-left: 100px;
+}
+
+.get-random{
+  display: inline-block;
+  float: right;
+  margin-right: 275px;
+  margin-top: 50px;
+}
+.search-gif{
+  clear: both;
+  display: inline-grid;
+  float: right;
+  margin-right: 275px;
+
+}
+.many-gif{
+  display: inline-block;
+  margin-left: 100px;
+}
 .many{
+  box-shadow: 10px 10px 5px #888888;
   display: grid;
   text-align: center;
+  margin: 20px;
 }
