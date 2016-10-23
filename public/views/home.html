@@ -1,23 +1,20 @@
-<div class="random-image">
+<div>
+    <button ng-click="main.getGiphy()">Click Here for Random Giphy</button>
     <p>
-        <img class="one" ng-src='{{main.randomImage.fixed_height_downsampled_url}}' />
+        <img class="one" ng-src='{{main.randomImage.image_url}}' />
         <div id="favorites">
             <label for="Comment:">Comment</label>
-            <input type="text" name="comment" ng-model="main.comment" />
-            <button ng-click="main.favoriteGiphy(main.comment, main.randomImage.fixed_height_downsampled_url)">Favorite Giphy</button>
+            <input type="text" id="comment" name="comment" ng-model="main.comment" />
+            <button ng-click="main.favoriteGiphy(main.comment, main.randomImage.image_url)">Favorite Giphy</button>
         </div>
     </p>
 </div>
 
-<div class ="get-random">
-  <button ng-click="main.getGiphy()">Click Here for New Random Giphy</button>
-</div>
-
-<div class="search-new">
+<div>
     <input type="text" ng-model="main.searched" />
     <button class="search-button" ng-click="main.searchGiphy()">Search for Giphy</button>
 </div>
-<div class="many-gifs">
+<div>
     <img class="many" ng-src="{{image.images.fixed_height.url}}" ng-repeat="image in main.searchImage track by $index" />
 
 </div>

@@ -24,8 +24,8 @@ function giphyAPIService($http) {
                 //console.log('main search image', main.searchImage);
             });
     };
-    this.favoriteGiphy = function(favorites){
-      return $http.post('/main', favorites)
+    this.favoriteGiphy = function(favorited){
+      return $http.post('/favorites', favorited)
       .then(function(response){
         return response;
         console.log('response in services', response);
@@ -33,7 +33,7 @@ function giphyAPIService($http) {
     };
 
     this.getFavoriteGiphy = function(){
-		return $http.get('/main')
+		return $http.get('/favorites')
 		.then(function(response){
 			return response;
 		});
