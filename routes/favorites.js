@@ -31,8 +31,7 @@ router.post('/', function(req, res){
                 res.sendStatus('query error', 500);
                 return;
             }
-
-        console.log('Got rows from the DB:',result.rows);
+        //console.log('Got rows from the DB:',result.rows);
         res.send(result.rows);
 
         });
@@ -53,7 +52,7 @@ router.post('/', function(req, res){
                   res.sendStatus('query error', 500);
                   return;
               }
-          console.log('Got rows from the DB:',result.rows);
+  //        console.log('Got rows from the DB:',result.rows);
           res.send(result.rows);
 
           });

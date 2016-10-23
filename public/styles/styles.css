@@ -47,14 +47,15 @@ input{
 .get-random{
   display: inline-block;
   float: right;
-  margin-right: 275px;
+  margin-right: 175px;
   margin-top: 50px;
 }
 .search-gif{
-  margin-top: 150px;
+  clear:left;
+  margin-top: 2px;
   display: inline-block;
   float: right;
-  margin-right: 275px;
+  margin-right: 175px;
 
 }
 .many-gif{

@@ -2,7 +2,7 @@ angular.module('giphyApp')
     .controller('MainController', MainController);
 
 function MainController(giphy) {
-    console.log('main controller loaded');
+    
     var main = this;
     main.randomImage = [];
     main.searchImage = [];
@@ -30,20 +30,18 @@ function MainController(giphy) {
     };
 
     main.favoriteGiphy = function(comment, imagelink) {
-        main.favorites = {
-            comment: comment,
-            imagelink: imagelink
-        };
+
+        main.favorites = {comment: comment, imagelink: imagelink};
         main.favoriteCount++;
         giphy.favoriteGiphy(main.favorites)
-            .then(function(response) {
+                .then(function(response) {
                 main.getFavoriteGiphy();
             });
     };
 
-    main.getFavoriteGiphy = function() {
+    main.getFavoriteGiphy = function(){
         giphy.getFavoriteGiphy()
-            .then(function(response) {
+              .then(function(response){
                 main.favoritesArray = response.data;
                 main.favoriteCount = response.data.length;
             });

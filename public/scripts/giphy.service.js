@@ -22,8 +22,10 @@ function giphyAPIService($http) {
             });
     };
     this.favoriteGiphy = function(favorited) {
+
         return $http.post('/favorites', favorited)
             .then(function(favorited) {
+
                 return favorited;
             });
     };
