@@ -1,18 +1,20 @@
 var router = require('express').Router();
 var pg = require('pg');
+var bodyParser = require('body-parser');
 
 var config = {
     database: 'weekend5'
 };
 
+router.use(bodyParser.urlencoded({ extended: true }));
+
 var pool = new pg.Pool(config);
 
 router.post('/', function(req, res){
-    console.log('req.body home route server post', req.body);
+    console.log('FAVORITE route server post req.body', req.body);
     var imagelink = req.body.imagelink;
     var comment = req.body.comment;
 
-    console.log('image link in server post', imagelink);
 
     pool.connect(function(err, client, done){
         if(err){

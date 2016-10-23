@@ -7,27 +7,55 @@ h1{
   text-align: center;
   font-size: 50px;
 }
-button{
-  display: inline-block;
+nav{
   text-align: center;
-  background-color: #e7e7e7; color: black;
+  display: block;
+  border-left: 50px;
+  font-size: 25px;
+}
+button{
+  text-align: center;
+  background-color: #e7e7e7;
+  color: black;
   font-size: 15px;
   margin-top: 2px;
+  margin-right: 100px;
 }
-div{
-  margin:auto;
-  text-align: center;
-}
+
 input{
   width: 200px;
-  height: 25px;
+  height: 20px;
+}
+.random-image{
+  display: inline-block;
+  float: left;
+  margin-left: 50px;
 }
 
 .one{
   box-shadow: 10px 10px 5px #888888;
 }
 
-.many{
-  display: grid;
+#favorites{
+  clear: both;
+}
+.get-random{
+
+  float: left;
+
+}
+.search-new{
+  clear: both;
+  float: right;
+
+}
+
+.many-gifs{
+  display: inline-block;
+  clear: both;
   text-align: center;
+
+}
+.many {
+    margin: 20px;
 }
