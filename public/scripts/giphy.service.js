@@ -22,13 +22,14 @@ function giphyAPIService($http) {
             });
     };
     this.favoriteGiphy = function(favorited) {
-
         return $http.post('/favorites', favorited)
             .then(function(favorited) {
 
                 return favorited;
             });
     };
+
+    
 
     this.getFavoriteGiphy = function() {
         return $http.get('/favorites')

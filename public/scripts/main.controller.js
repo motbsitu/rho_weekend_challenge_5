@@ -2,7 +2,7 @@ angular.module('giphyApp')
     .controller('MainController', MainController);
 
 function MainController(giphy) {
-    
+
     var main = this;
     main.randomImage = [];
     main.searchImage = [];
@@ -49,4 +49,5 @@ function MainController(giphy) {
 
     main.getFavoriteGiphy();
 
+    main.favoriteCount = main.favoriteCount;
 }
