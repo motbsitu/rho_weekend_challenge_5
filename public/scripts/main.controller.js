@@ -36,6 +36,7 @@ function MainController(giphy) {
         giphy.favoriteGiphy(main.favorites)
                 .then(function(response) {
                 main.getFavoriteGiphy();
+
             });
     };
 
@@ -44,6 +45,8 @@ function MainController(giphy) {
               .then(function(response){
                 main.favoritesArray = response.data;
                 main.favoriteCount = response.data.length;
+
+
             });
     };
 

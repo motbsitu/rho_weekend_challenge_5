@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const favorites = require('./routes/favorites.js');
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+//app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use('/favorites', favorites);
 
